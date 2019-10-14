@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Assignment.Pages.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assignment.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer Margin="20">
+        <StackPanel Margin="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock Text="Register" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBox x:Name="Firstname" Header= "Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="FirstNameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <TextBox x:Name="Lastname" Header="Lastname" Margin="0,24,0,0" MaxLength="15" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="LastNameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <AppBarButton Icon="Camera" Click="ButtonBase_Photo">Take a photo</AppBarButton>
+            <Image x:Name="Avatar" Width="200" Height="200"></Image>
+            <TextBox x:Name="AvatarUrl" Visibility="Collapsed"></TextBox>
+            <TextBox x:Name="Phone" Header="Phone" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="PhoneMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <TextBox x:Name="Address" Header="Address" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="AddressMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <TextBox x:Name="Introduction" Header="Introduction" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="GenderLabel" Text="Gender" Margin="0,24,0,0" Width="400" HorizontalAlignment="Left"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Content="Male" Tag="Male" Checked="Gender_check" IsChecked="True"/>
+                <RadioButton Content="Female" Tag="Female" Checked="Gender_check"/>
+            </StackPanel>
+            <DatePicker x:Name="Birthday" Header="Birthday" Margin="0,24,0,0"/>
+            <TextBox x:Name="Email" Header="Email" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="EmailMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <PasswordBox x:Name="Password" Header="Password" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"></PasswordBox>
+            <TextBlock x:Name="PasswordMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <Button Margin="0,24,0,0" Click="ButtonBase_OnClick">Register</Button>
+        </StackPanel>
+        
+    </ScrollViewer>
+</Page>

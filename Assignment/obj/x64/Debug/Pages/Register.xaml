@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Assignment.Pages.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assignment.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer Margin="20">
+        <StackPanel Margin="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock Text="Register" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBox x:ConnectionId='2' x:Name="Firstname" Header= "Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='3' x:Name="FirstNameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <TextBox x:ConnectionId='4' x:Name="Lastname" Header="Lastname" Margin="0,24,0,0" MaxLength="15" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='5' x:Name="LastNameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <AppBarButton x:ConnectionId='6' Icon="Camera"                         >Take a photo</AppBarButton>
+            <Image x:ConnectionId='7' x:Name="Avatar" Width="200" Height="200"></Image>
+            <TextBox x:ConnectionId='8' x:Name="AvatarUrl" Visibility="Collapsed"></TextBox>
+            <TextBox x:ConnectionId='9' x:Name="Phone" Header="Phone" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='10' x:Name="PhoneMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <TextBox x:ConnectionId='11' x:Name="Address" Header="Address" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='12' x:Name="AddressMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <TextBox x:ConnectionId='13' x:Name="Introduction" Header="Introduction" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='14' x:Name="GenderLabel" Text="Gender" Margin="0,24,0,0" Width="400" HorizontalAlignment="Left"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:ConnectionId='21' Content="Male" Tag="Male"                        IsChecked="True"/>
+                <RadioButton x:ConnectionId='22' Content="Female" Tag="Female"                       />
+            </StackPanel>
+            <DatePicker x:ConnectionId='15' x:Name="Birthday" Header="Birthday" Margin="0,24,0,0"/>
+            <TextBox x:ConnectionId='16' x:Name="Email" Header="Email" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"/>
+            <TextBlock x:ConnectionId='17' x:Name="EmailMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <PasswordBox x:ConnectionId='18' x:Name="Password" Header="Password" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"></PasswordBox>
+            <TextBlock x:ConnectionId='19' x:Name="PasswordMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <Button x:ConnectionId='20' Margin="0,24,0,0"                           >Register</Button>
+        </StackPanel>
+        
+    </ScrollViewer>
+</Page>
+
